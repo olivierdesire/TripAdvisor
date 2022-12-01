@@ -161,7 +161,7 @@ h2 {
   display: flex;
   gap: 15px;
   overflow: hidden;
-  overflow-x: scrol;
+  overflow-x: scroll;
 }
 
 .unmissable > div:last-child img {
