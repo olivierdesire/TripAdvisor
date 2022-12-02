@@ -152,9 +152,33 @@ h2 {
   margin-bottom: 60px;
 }
 
+.unmissable h3 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.unmissable p {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
 .unmissable > div:first-child {
-  width: 220px;
-  border: 1px solid black;
+  width: 230px;
+  flex-shrink: 0;
+  padding-right: 60px;
+  /* border: 1px solid black; */
+}
+
+.unmissable > div:first-child button {
+  border: none;
+  background-color: white;
+  font-family: inherit;
+  padding-left: 0px;
+  text-decoration: underline;
 }
 
 .unmissable > div:last-child {
@@ -164,8 +188,27 @@ h2 {
   overflow-x: scroll;
 }
 
+.test {
+  position: relative;
+}
+
+.test-logo {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+.test-logo img {
+  height: 5px;
+  width: 5px;
+}
+
 .unmissable > div:last-child img {
   height: 200px;
   width: 270px;
   flex-shrink: 0;
+}
+
+.unmissable > div:last-child::-webkit-scrollbar {
+  display: none;
 }
