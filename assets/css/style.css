@@ -138,12 +138,49 @@ h2 {
 .town-info > div:first-child {
   flex: 1;
 }
+
 .town-info > div:last-child {
-  width: 570px;
+  width: 480px;
 }
 
 .town-info p {
   font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-right: 70px;
+}
+
+.text-map {
+  border: 1px solid red;
+  height: 150px;
+  background-color: #ff5d5d;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.text-map h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-map p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.text-map button {
+  border: none;
+  background-color: Black;
+  color: white;
+  font-size: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.map img {
+  height: calc(100% - 207px);
+  width: 100%;
+  border-radius: 0 0 10px 10px;
 }
 
 /* Annecy les immanquables  */
@@ -162,6 +199,7 @@ h2 {
 
 .unmissable p {
   font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 22px;
   margin-bottom: 10px;
 }
@@ -181,29 +219,33 @@ h2 {
   text-decoration: underline;
 }
 
-.unmissable > div:last-child {
+.carroussel {
   display: flex;
   gap: 15px;
   overflow: hidden;
   overflow-x: scroll;
 }
 
-.test {
+.carroussel > div:first-child {
   position: relative;
 }
 
-.test-logo {
+/* .carroussel-logo {
+  position: relative;
+} */
+
+.carroussel .carroussel-logo {
   position: absolute;
   left: 5px;
   bottom: 5px;
+  height: 10px;
+  width: 10px;
 }
 
-.test-logo img {
-  height: 5px;
-  width: 5px;
-}
+/* .test-logo img {
+} */
 
-.unmissable > div:last-child img {
+.carroussel img {
   height: 200px;
   width: 270px;
   flex-shrink: 0;
