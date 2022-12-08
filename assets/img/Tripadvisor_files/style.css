@@ -20,29 +20,6 @@ h1 span {
   color: #fe5d5d;
 }
 
-h2 {
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 34px;
-  color: black;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 29px;
-  color: black;
-  margin-bottom: 20px;
-}
-
-h4 {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: bold;
-  color: #545454;
-  margin-bottom: 5px;
-}
 /* HEADER */
 
 header {
@@ -115,6 +92,14 @@ header button:not(:nth-child(4)):hover {
 
 .menu .menu-hidden {
   display: none;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 34px;
+  color: black;
+  margin-bottom: 20px;
 }
 
 /* Images */
@@ -213,6 +198,14 @@ header button:not(:nth-child(4)):hover {
   margin-bottom: 60px;
 }
 
+.unmissable h3 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
+  color: black;
+  margin-bottom: 20px;
+}
+
 .unmissable p {
   font-size: 18px;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -247,20 +240,22 @@ header button:not(:nth-child(4)):hover {
   position: relative;
 }
 
-.favorite2 {
-  background-color: white;
-  height: 40px;
-  width: 40px;
+.carroussel .carroussel-logo {
   position: absolute;
-  bottom: 70px;
-  left: 10px;
-  border-radius: 50%;
+  left: 5px;
+  bottom: 10px;
+  height: 50px;
+  width: 60px;
 }
 
-.carroussel .favorite2 img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.carroussel img {
+  height: 200px;
+  width: 270px;
+  flex-shrink: 0;
+}
+
+.unmissable > div:last-child::-webkit-scrollbar {
+  display: none;
 }
 
 .favorite {
@@ -276,58 +271,8 @@ header button:not(:nth-child(4)):hover {
   align-items: center;
 }
 
-.carroussel img {
-  height: 200px;
-  width: 270px;
-  flex-shrink: 0;
-}
-
-.unmissable .carroussel p {
-  font-size: 14px;
-  line-height: 17px;
-  color: #333333;
-  font-family: TS-reg, sans-serif;
-}
-
-.unmissable > div:last-child::-webkit-scrollbar {
-  display: none;
-}
-
-/* FOOTER */
-footer {
-  background-color: #f9f1ec;
-  height: 156px;
-}
-
-footer img {
-  height: 40px;
-  padding-right: 20px;
-}
-footer > div {
-  display: flex;
-  padding-top: 30px;
-}
-
-.col-footer-1 {
-  display: flex;
-  flex-direction: column;
-}
-
-.col-footer-1 p {
-  font-size: 12px;
-  line-height: 14px;
-  margin-bottom: 10px;
-}
-
-.link {
-  width: 650px;
-}
-
-.link a {
-  color: black;
-}
-
 /* MEDIA QUERY */
+
 @media (max-width: 1184px) {
   .menu {
     height: 46px;
@@ -365,46 +310,8 @@ footer > div {
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   header span {
     visibility: hidden;
-  }
-
-  .col2-map {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  /* header button:not(:last-child) {
-    background-color: red;
-  } */
-
-  .images > div:last-child {
-    display: none;
-  }
-
-  /* Annecy les immanquables  */
-  .unmissable {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 60px;
-  }
-
-  .unmissable > div:first-child {
-    width: 100%;
-    flex-shrink: 0;
-    /* padding-right: 60px; */
-    /* border: 1px solid black; */
-  }
-
-  .carroussel img {
-    height: 415px;
-    width: 555px;
-    flex-shrink: 0;
-  }
-
-  .unmissable button {
-    margin-bottom: 10px;
   }
 }
