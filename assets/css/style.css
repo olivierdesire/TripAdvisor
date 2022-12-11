@@ -46,8 +46,19 @@ h4 {
 }
 
 i {
-  height: 50px;
+  font-size: 1.3em;
 }
+
+.hidden {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* HEADER ----------------------------------------  */
 /* ------------------------------------------------ */
 header {
@@ -63,6 +74,7 @@ header > div {
 
 .logo {
   height: 40px;
+  width: 200px;
 }
 
 header nav {
@@ -75,7 +87,8 @@ header button {
   border: none;
   background-color: #fff;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 16px;
+  line-height: 20px;
   padding: 10px 15px;
   border-radius: 20px;
 }
@@ -83,6 +96,8 @@ header button {
 header button:nth-child(4) {
   background-color: black;
   color: white;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 header button:not(:nth-child(4)):hover {
@@ -103,6 +118,8 @@ header button:not(:nth-child(4)):hover {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 20px;
   /* flex-wrap: wrap; */
 }
 
@@ -125,6 +142,11 @@ header button:not(:nth-child(4)):hover {
 
 /* Images ----------------------------------------- */
 /* ------------------------------------------------ */
+.container-images {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 .images {
   height: 430px;
   width: 100%;
@@ -223,6 +245,10 @@ header button:not(:nth-child(4)):hover {
   margin-bottom: 60px;
 }
 
+.unmissable1 {
+  flex: 1;
+}
+
 .unmissable p {
   font-size: 18px;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -246,23 +272,28 @@ header button:not(:nth-child(4)):hover {
 }
 
 .carroussel {
+  height: 100%;
+  flex: 3;
   display: flex;
   gap: 15px;
   overflow: hidden;
   overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /* .carroussel > div:first-child { */
-.carroussel > div {
+/* .carroussel > div {
   position: relative;
-}
+  flex-shrink: 0;
+} */
 
 .favorite2 {
   background-color: white;
   height: 40px;
   width: 40px;
   position: absolute;
-  bottom: 70px;
+  bottom: 10px;
   left: 10px;
   border-radius: 50%;
 }
@@ -286,9 +317,16 @@ header button:not(:nth-child(4)):hover {
   align-items: center;
 }
 
-.carroussel img {
+.col > div:first-child {
   height: 200px;
-  width: 270px;
+  width: 100%;
+  /* background-color: coral; */
+  position: relative;
+}
+.col {
+  /* border: 1px solid black; */
+  max-height: 200px;
+  width: calc((100% - 20px) / 3);
   flex-shrink: 0;
 }
 
@@ -312,6 +350,7 @@ footer {
 
 footer img {
   height: 40px;
+  width: 40px;
   padding-right: 20px;
 }
 footer > div {
@@ -342,46 +381,65 @@ footer > div {
 /*   MEDIA QUERY  ------------------------------- */
 /* ------------------------------------------------ */
 
-@media (max-width: 1184px) {
+@media (max-width: 1183px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 20px;
+  }
+
+  .container-images {
+    max-width: 1140px;
+    margin: 0 20px;
+  }
+
   .menu {
     height: 46px;
     width: 100%;
-    display: flex;
-    gap: 10px;
     margin-bottom: 70px;
     flex-wrap: wrap;
   }
 
   .menu div {
-    border: solid 1px black;
-    box-sizing: border-box;
-    height: 100%;
     width: calc((100% - 30px) / 4);
-    /* width: 100%; */
-    /* flex: 0 0 100%; */
-    border-radius: 10px;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    /* flex-shrink: 0; */
   }
 
   .menu .menu-hidden {
     display: flex;
     justify-content: space-between;
   }
-}
+  /* Images --------- */
+  /* ---------------- */
+  .images {
+    height: 370px;
+  }
 
-@media (max-width: 1160px) {
-  .container {
-    margin: 0 10px;
+  .images > div:last-child {
+    width: 400px;
+  }
+
+  /* Immanquables */
+  /* ---------- */
+  .col img {
   }
 }
 
 @media (max-width: 1023px) {
+  /* header ----------- */
+  /* ------------------ */
   header span {
-    visibility: hidden;
+    display: none;
+  }
+
+  /* images --------- */
+  /* ---------------- */
+
+  .images {
+    height: 275px;
+  }
+
+  .images > div:last-child {
+    width: 300px;
   }
 
   .col2-map {
@@ -390,15 +448,65 @@ footer > div {
 }
 
 @media (max-width: 767px) {
-  /* header button:not(:last-child) {
-    background-color: red;
-  } */
+  /* header  ----------- */
+  /* ------------------- */
+
+  header .hidden {
+    display: inline;
+  }
+
+  .search {
+    display: flex;
+  }
+
+  header nav button:not(:last-child) {
+    display: none;
+  }
+  .logo {
+    height: 25px;
+    align-items: center;
+  }
+
+  /* images  ------ */
+  /*  ------------- */
+  .container-images {
+    max-width: 1140px;
+    margin: 0;
+  }
 
   .images > div:last-child {
     display: none;
   }
 
+  /* Titre ---------------------*/
+  /* ---------------------------- */
+
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  /* Menu------ */
+  /* ----------- */
+  .menu {
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+    overflow: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .menu div {
+    flex-shrink: 0;
+  }
+
+  .menu::-webkit-scrollbar {
+    display: none;
+  }
+
   /* Annecy les immanquables  */
+  /* ------------------------ */
   .unmissable {
     display: flex;
     flex-direction: column;
@@ -412,10 +520,27 @@ footer > div {
     /* border: 1px solid black; */
   }
 
-  .carroussel img {
+  .unmissable1 {
+    flex: unset;
+  }
+
+  .carroussel {
+    height: 100%;
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .col {
+    flex-shrink: 0;
+  }
+
+  .col img {
     height: 415px;
     width: 555px;
-    flex-shrink: 0;
   }
 
   .unmissable button {
