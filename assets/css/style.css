@@ -548,7 +548,7 @@ footer > div {
   }
 }
 
-@media (max-width: 292px) {
+@media (max-width: 400px) {
   /* menu -------- */
   .menu {
     height: 46px;
